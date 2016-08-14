@@ -5,7 +5,7 @@ pathToSystemDir=~/android/G530FZXXU1BPF1_G530FZOXX1BPG1_XEO/system
 for file in $(find proprietary); do
 
 	if [ -f  ${file} ]; then
-		file2=$(echo ${file|sed 's:proprietary/::')
+		file2=$(echo ${file}|sed 's:proprietary/::')
 
 		if [ -f ${pathToSystemDir}/${file2} ]; then
 			rm ${file}
